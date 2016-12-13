@@ -11,6 +11,7 @@ import 'assets/css/layout.css'
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  template: '<App/>',
-  components: { App }
+  // template: '<App/>',
+  components: { app:App },
+  render: h => h('app')
 })
