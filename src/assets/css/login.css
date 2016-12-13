@@ -1,0 +1,24 @@
+.login-header header{
+	margin:0;
+	padding:0;
+}
+.shade{
+	background-image:-webkit-linear-gradient(1deg,#24a7e2,#37bb65);
+	background-image:-moz-linear-gradient(1deg,#24a7e2,#37bb65);
+}
+#login-container{
+	margin:0 auto;
+	padding:50px;
+}
+#LoginQuickResponse{
+	background:#fff;
+	margin:0 auto;
+	width:450px;
+    padding:10px;
+	border-radius:4px;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+}
+#LoginQuickResponse iframe{
+	margin-left:65px;
+}

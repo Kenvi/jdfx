@@ -1,0 +1,16 @@
+.f-l(@l:left){
+	float:@l;
+}
+
+.f-r(@r:right){
+	float:@r;
+}
+
+.clear(@b:both){
+	&:after{
+		content:'';
+		width:0;
+		height:0;
+		clear:@b;
+	}
+}
