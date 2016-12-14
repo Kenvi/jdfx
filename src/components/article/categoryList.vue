@@ -21,6 +21,7 @@
             </tbody>
           </table>
         </div>
+        <pager v-bind:sum="total" v-bind:page_count="5" v-bind:selected_page="1"></pager>
       </div>
 
     </div>
@@ -32,13 +33,18 @@
 
 <script>
 import data from '../../assets/data.js'
+import pager from '../pager.vue'
 
 export default {
   name: 'categoryList',
   data:function () {
   	return {
-			categoryList:data.groupList.retData.result
+			categoryList:data.groupList.retData.result,
+			total:data.groupList.retData.total
   	}
+  },
+  components:{
+    pager
   },
   methods:{
 
