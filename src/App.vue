@@ -11,9 +11,9 @@
 
 import Data from './assets/data.js'
 
-import leftMenu from './components/leftMenu'
-import articleList from './components/articleList'
-import categoryList from './components/categoryList'
+import leftMenu from './components/article/leftMenu'
+import articleList from './components/article/articleList'
+import categoryList from './components/article/categoryList'
 
 export default {
   name: 'app',
