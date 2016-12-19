@@ -25,7 +25,7 @@
             </tbody>
           </table>
         </div>
-        <pager v-bind:sum="total" v-bind:page_count="5" v-bind:selected_page="1"></pager>
+        <pager v-bind:sum="total" v-bind:pageCount="5" v-bind:selectedPage="1"></pager>
       </div>
     </div>
   </div>

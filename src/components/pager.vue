@@ -11,13 +11,13 @@
 <script>
   export default{
     name:'pager',
-    props:['sum','page_count','selected_page'],
+    props:['sum','pageCount','selectedPage'],
     data(){
       return{
         config:{
           total:this.sum,
-          selectedPage: this.selected_page,
-          pageCount: this.page_count
+          selectedPage: this.selectedPage,
+          pageCount: this.pageCount
         }
       }
     },
