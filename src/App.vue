@@ -1,9 +1,9 @@
 <template>
-  <div id="app" class="wapper_con">
-    <!-- <img src="./assets/logo.png"> -->
+  <div class="wapper_con">
     <leftMenu v-on:shiftTab="linkTo"></leftMenu>
     <articleList v-show="config.showTab === 1"></articleList>
     <categoryList v-show="config.showTab === 2"></categoryList>
+    <articleEdit v-show="config.showTab === 3"></articleEdit>
   </div>
 </template>
 
@@ -14,6 +14,7 @@ import Data from './assets/data.js'
 import leftMenu from './components/article/leftMenu'
 import articleList from './components/article/articleList'
 import categoryList from './components/article/categoryList'
+import articleEdit from './components/article/articleEdit'
 
 export default {
   name: 'app',
@@ -21,14 +22,15 @@ export default {
     return {
       data:Data,
       config:{
-        showTab:1
+        showTab:3
       }
     }
   },
   components: {
     leftMenu,
     articleList,
-    categoryList
+    categoryList,
+    articleEdit
   },
   methods:{
     linkTo:function (index) {

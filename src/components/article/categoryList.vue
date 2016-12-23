@@ -46,28 +46,28 @@ export default {
   	}
   },
   created:function(){
-    this.$http.post('/index.php/pcViews/getUserGroupList',{pageIndex:1,pageSize:10,isGetTotal:1}).then(function(res){
-      console.log(res.body);
-    })
-    // var _self = this
-    // $.ajax({
-    //     url:"http://share.mofor.cn/index.php/pcViews/getUserGroupList",
-    //     data:{pageIndex:1,pageSize:10,isGetTotal:1},
-    //     // type:"POST",
-    //     dataType:'jsonp',
-    //     success:function(res){
-    //         if(res.retCode === '1'){
-    //             _self.categoryList = res.retData.result;
-    //             _self.total = res.retData.total;
-    //             console.log(_self.categoryList)
-    //         }else{
-    //             // _self.showTooTips(res.retMsg);                        
-    //         }
-    //     },
-    //     error:function(){
-    //         // _self.showTooTips("提交失败！");
-    //     }
-    // });
+    // this.$http.post('/index.php/pcViews/getUserGroupList',{pageIndex:1,pageSize:10,isGetTotal:1}).then(function(res){
+    //   console.log(res.body);
+    // })
+    var _self = this
+    $.ajax({
+        url:"http://share.mofor.cn/index.php/pcViews/getUserGroupList",
+        data:{pageIndex:1,pageSize:10,isGetTotal:1},
+        type:"POST",
+        dataType:'jsonp',
+        success:function(res){
+            if(res.retCode === '1'){
+                _self.categoryList = res.retData.result;
+                _self.total = res.retData.total;
+                console.log(_self.categoryList)
+            }else{
+                // _self.showTooTips(res.retMsg);                        
+            }
+        },
+        error:function(){
+            // _self.showTooTips("提交失败！");
+        }
+    });
 
   },
   components:{
