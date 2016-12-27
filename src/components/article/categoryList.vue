@@ -8,7 +8,7 @@
           <table class="table table-sm">
             <thead><tr><th>ID</th><th>分类名</th><th>文章数</th><th>是否可见</th><th>操作</th></tr></thead>
             <tbody>
-              <tr v-for="(item,index) in categoryList" v-bind:key="item.id">
+              <tr v-for="(item,index) in CategoryList" v-bind:key="item.id">
                 <td v-html="item.id"></td>
                 <td v-html="item.groupName"></td>
                 <td v-html="item.articleCount"></td>
@@ -35,13 +35,12 @@
 import data from '../../assets/data.js'
 import pager from '../pager.vue'
 import $ from 'jquery'
-import 'vue-resource'
 
 export default {
   name: 'categoryList',
   data:function () {
   	return {
-			categoryList:data.groupList.retData.result,
+			CategoryList:data.groupList.retData.result,
 			total:data.groupList.retData.total
   	}
   },
@@ -50,6 +49,7 @@ export default {
     //   console.log(res.body);
     // })
     var _self = this
+    console.log(_self.CategoryList)
     $.ajax({
         url:"http://share.mofor.cn/index.php/pcViews/getUserGroupList",
         data:{pageIndex:1,pageSize:10,isGetTotal:1},
@@ -61,7 +61,7 @@ export default {
                 _self.total = res.retData.total;
                 // console.log(_self.categoryList)
             }else{
-                // _self.showTooTips(res.retMsg);                        
+                // _self.showTooTips(res.retMsg);
             }
         },
         error:function(){
@@ -90,7 +90,7 @@ export default {
                   vm.total = res.retData.total;
                   console.log(res)
               }else{
-                  vm.showTooTips(res.retMsg);                        
+                  vm.showTooTips(res.retMsg);
               }
           },
           error:function(){

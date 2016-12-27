@@ -3,7 +3,7 @@
 	  <ul class="slider-menu">
 	    <li>
         <router-link to="/" v-bind:class="{'on':selected===1}">
-          <p v-on:click="shiftTab(1)"><i class="material-icons md-18">list</i>添加文章</p> 
+          <p v-on:click="shiftTab(1)"><i class="material-icons md-18">list</i>添加文章</p>
         </router-link>
       </li>
 	    <li>
@@ -24,13 +24,13 @@ export default {
   data:function () {
   	return {
 			selected:1
-  	}	
+  	}
   },
   methods:{
-  	shiftTab:function(index){ // 左边导航栏tab切换 
+  	shiftTab:function(index){ // 左边导航栏tab切换
   		if(index){
   			this.selected = index
-        console.log(index)
+//        console.log(index)
   			this.$emit('shiftTab',this.selected)
   		}
   	}
