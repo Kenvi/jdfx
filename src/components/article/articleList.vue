@@ -3,7 +3,7 @@
     <div class="block-post-list">
       <h1>文章列表</h1>
       <div class="block-list">
-        <div class="hd"><a class="btn btn-primary" v-on:click="createNewArticle()" >添加文章</a></div>
+        <div class="hd"><router-link to="/editArticle" class="btn btn-primary">添加文章</router-link></div>
         <div class="bd">
           <table class="table table-sm">
             <thead><tr><th>ID</th><th>分类名</th><th>文章名字</th><th>门槛</th><th>创建时间</th><th>最后修改时间</th><th>操作</th></tr></thead>

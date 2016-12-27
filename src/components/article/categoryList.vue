@@ -59,7 +59,7 @@ export default {
             if(res.retCode === '1'){
                 _self.categoryList = res.retData.result;
                 _self.total = res.retData.total;
-                console.log(_self.categoryList)
+                // console.log(_self.categoryList)
             }else{
                 // _self.showTooTips(res.retMsg);                        
             }

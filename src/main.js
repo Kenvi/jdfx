@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import App from './App'
+import EditArticle from './EditArticle'
 import VueResource from 'vue-resource'
 import VueRouter from 'vue-router'
 
@@ -14,11 +15,8 @@ import 'assets/css/layout.css'
 
 const router = new VueRouter({
 	routes:[
-		{path:'/',component:App,
-			children:[
-				{path:'/editArticle',component:App,}
-			]
-		}
+		{path:'/',component:App},
+		{path:'/editArticle',component:EditArticle}
 	]
 })
 
